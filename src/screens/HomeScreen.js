@@ -29,7 +29,7 @@ const HomeScreen = {
                 } </a>
                     </div>
                     <div class="product-brand">${product.name}</div>
-                    <div class="product-price">${product.price}</div>
+                    <div class="product-price">$${product.price}</div>
                 </div>
             </li>
             `

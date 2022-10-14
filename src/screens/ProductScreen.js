@@ -10,7 +10,6 @@ const ProductScreen = {
       return `<h1>${product.msg}</h1>`;
     }
     console.log(product);
-    // return `<h1>${product[0].product_name}</h1>`;
     return `
     <div class="content">
         <div class="back-to-result">
@@ -19,23 +18,23 @@ const ProductScreen = {
         <div class="details">
             <div class="details-image">
                 <img src="${
-                  product[0].url_image === "" || product[0].url_image === null
+                  product.url_image === "" || product.url_image === null
                     ? imgNotFound
-                    : product[0].url_image
+                    : product.url_image
                 }" />
             </div>
             <div class="details-info">
                 <ul>
                     <li>
-                        <h1>${product[0].product_name}</h1>
+                        <h1>${product.product_name}</h1>
                     </li>
                     <li>
-                        Price: <strong>$${product[0].price}</strong>
+                        Price: <strong>$${product.price}</strong>
                     </li>
                     <li>
                         Category: 
                         <div>
-                            ${product[0].name}
+                            ${product.name}
                         </div>
                     </li>
                 </ul>                
@@ -43,11 +42,10 @@ const ProductScreen = {
             <div class="details-action">
                 <ul>
                     <li>
-                        Price: $${product[0].price}
+                        Price: $${product.price}
                     </li>
-                    <li>
-                        <button class="fw primary">Add to Cart</button>
-                    </li>                    
+                    <li>                    
+                        <button class="fw primary">Add to Cart</button>                                        
                 </ul>
             </div>                
         </div>
