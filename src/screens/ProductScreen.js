@@ -3,6 +3,13 @@ import { getProduct } from "../api";
 import { imgNotFound } from "../config";
 
 const ProductScreen = {
+  after_render: () => {
+    const request = parseRequestUrl();
+    document.getElementById("add-button").addEventListener("click", () => {
+      document.location.hash = `/cart/${request.id}`;
+    });
+  },
+
   render: async () => {
     const request = parseRequestUrl();
     const product = await getProduct(request.id);
@@ -45,7 +52,7 @@ const ProductScreen = {
                         Price: $${product.price}
                     </li>
                     <li>                    
-                        <button class="fw primary">Add to Cart</button>                                        
+                        <button id="add-button"class="fw primary">Add to Cart</button>                                        
                 </ul>
             </div>                
         </div>
