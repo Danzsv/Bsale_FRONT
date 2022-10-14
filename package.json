@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server src --verbose",
+    "start": "webpack-dev-server --mode development --watch-content-base --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,10 @@
     "url": "https://github.com/Danzsv/Bsale_FRONT/issues"
   },
   "homepage": "https://github.com/Danzsv/Bsale_FRONT#readme",
-  "devDependencies": {
-    "live-server": "^1.2.2"
+  "dependencies": {
+    "axios": "^1.1.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
