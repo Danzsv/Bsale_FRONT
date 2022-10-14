@@ -1,0 +1,24 @@
+{
+  "name": "bsale_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server src --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danzsv/Bsale_FRONT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danzsv/Bsale_FRONT/issues"
+  },
+  "homepage": "https://github.com/Danzsv/Bsale_FRONT#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
