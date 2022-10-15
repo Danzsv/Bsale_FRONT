@@ -10,7 +10,7 @@ const Header = {
     <button id="aside-open-button">
       &#9776;
     </button>
-    <a href="/">BSale Test</a>
+    <a href="/#/">BSale Test</a>
   </div>
   <div class="search">
   <form class="search-form"  id="search-form">
