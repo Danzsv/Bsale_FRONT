@@ -1,11 +1,8 @@
-import axios from "axios";
-import { apiUrl } from "../config";
-import { parseRequestUrl } from "../utils";
+import { getCategories } from "../api";
 
 const Aside = {
   render: async () => {
-    const request = parseRequestUrl();
-    const response = await axios.get(`${apiUrl}/categories`);
+    const response = await getCategories();
     const categories = response.data;
 
     return `

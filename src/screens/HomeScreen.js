@@ -1,5 +1,5 @@
-import axios from "axios";
-import { apiUrl, imgNotFound } from "../config";
+import { imgNotFound } from "../config";
+import { whatRequestIs } from "../api";
 import {
   parseRequestUrl,
   discountProduct,
@@ -10,21 +10,12 @@ import {
 const HomeScreen = {
   render: async () => {
     const request = parseRequestUrl();
-    var response;
-    if (request.name === "name") {
-      response = await axios.get(`${apiUrl}/products?name=${request.value}`);
-    } else if (request.name === "category") {
-      response = await axios.get(
-        `${apiUrl}/products?category=${request.value}`
-      );
-    } else {
-      response = await axios.get(`${apiUrl}/products`);
-    }
+    const response = await whatRequestIs(request);
 
     if (response.data.msg) {
-      return `<div>El producto no existe actualmente </div>`;
+      return `<div>Error al obtener los productos</div>`;
     }
-    const products = await response.data;
+    const products = response.data;
 
     return `
         <ul class="products">

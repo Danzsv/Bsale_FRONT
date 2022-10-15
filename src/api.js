@@ -7,32 +7,23 @@ export const getProduct = async (id) => {
     if (!response) {
       throw new Error(response.data.message);
     }
-
     return response.data;
   } catch (error) {
     console.log(error);
     return { error: error.response.data.message || error.message };
   }
 };
-
-export const getProducts = async ({ searchKeyword = "" }) => {
-  try {
-    let queryString = "?";
-    if (searchKeyword) queryString += `searchKeyword=${searchKeyword}&`;
-
-    const response = await axios({
-      url: `${apiUrl}/api/products${queryString}`,
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (response.statusText !== "OK") {
-      throw new Error(response.data.message);
-    }
-    return response.data;
-  } catch (err) {
-    console.log(err);
-    return { error: err.response.data.message || err.message };
+export const whatRequestIs = async (request) => {
+  if (request.name === "name") {
+    return await axios.get(`${apiUrl}/products?name=${request.value}`);
   }
+  if (request.name === "category") {
+    return await axios.get(`${apiUrl}/products?category=${request.value}`);
+  }
+  return await axios.get(`${apiUrl}/products`);
+};
+
+export const getCategories = async () => {
+  const response = await axios.get(`${apiUrl}/categories`);
+  return response;
 };

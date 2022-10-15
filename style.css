@@ -306,9 +306,10 @@ footer {
 /* search */
 
 .search {
-  width: 40%;
+  width: 30%;
 }
 form.search-form input[type="text"] {
+  font-size: medium;
   float: left;
   width: 80%;
   border-right: none;
