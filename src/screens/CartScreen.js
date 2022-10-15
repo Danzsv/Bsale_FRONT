@@ -1,5 +1,10 @@
 import { getProduct } from "../api";
-import { parseRequestUrl, rerender, discountProduct } from "../utils";
+import {
+  parseRequestUrl,
+  rerender,
+  discountProduct,
+  showNumMil,
+} from "../utils";
 import { getCartItems, setCartItems } from "../localStorage";
 import { imgNotFound } from "../config";
 
@@ -87,7 +92,7 @@ const CartScreen = {
                 <div class="cart-name">
                   <div>
                     <a href="/#/product/${item.product}">
-                      ${item.name}
+                      ${item.name.toUpperCase()}
                     </a>
                   </div>
                   <div>
@@ -107,7 +112,7 @@ const CartScreen = {
                   </div>
                 </div>
                 <div class="cart-price">
-                  $${item.price}
+                  $${showNumMil(item.price)}
                 </div>
             </li>
             `
@@ -120,7 +125,7 @@ const CartScreen = {
           <h3>
             Subtotal (${cartItems.reduce((a, c) => a + c.qty, 0)} items)
             :
-            $ ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+            $ ${showNumMil(cartItems.reduce((a, c) => a + c.price * c.qty, 0))}
           </h3>
           <button id="checkout-button" class="primary fw">
             Procced to CheckOut

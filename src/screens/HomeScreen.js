@@ -1,6 +1,11 @@
 import axios from "axios";
 import { apiUrl, imgNotFound } from "../config";
-import { parseRequestUrl, discountProduct, uppInitial } from "../utils";
+import {
+  parseRequestUrl,
+  discountProduct,
+  uppInitial,
+  showNumMil,
+} from "../utils";
 
 const HomeScreen = {
   render: async () => {
@@ -59,16 +64,18 @@ const HomeScreen = {
                       product.discount === 0
                         ? `
                         <div class="product-price">
-                        $${discountProduct(product.price, product.discount)}
+                        $${showNumMil(product.price)}
                         </div>`
                         : `
                         <div class="product-price-discount">
                             <strike>
-                            $${product.price}
+                            $${showNumMil(product.price)}
                             </strike>
                         </div>
                         <div class="product-price-discount">
-                            $${discountProduct(product.price, product.discount)}
+                            $${showNumMil(
+                              discountProduct(product.price, product.discount)
+                            )}
                         </div>
                         `
                     } 

@@ -1,4 +1,9 @@
-import { parseRequestUrl, discountProduct, uppInitial } from "../utils";
+import {
+  parseRequestUrl,
+  discountProduct,
+  uppInitial,
+  showNumMil,
+} from "../utils";
 import { getProduct } from "../api";
 import { imgNotFound } from "../config";
 
@@ -48,21 +53,21 @@ const ProductScreen = {
                       product.discount === 0
                         ? `
                         <li class="detail-list">
-                        <strong>$${discountProduct(
-                          product.price,
-                          product.discount
+                        <strong>$${showNumMil(
+                          discountProduct(product.price, product.discount)
                         )}</strong>
                         </li>`
                         : `
                         <li class="detail-list-discount">
                             <strike>
-                            $${product.price}                        
+                            $${showNumMil(
+                              product.price
+                            )}                        
                             </strike>
                         </li>    
                         <li class="detail-list-discount">
-                            <strong>$${discountProduct(
-                              product.price,
-                              product.discount
+                            <strong>$${showNumMil(
+                              discountProduct(product.price, product.discount)
                             )}</strong>
                         </li>
                         
@@ -81,9 +86,8 @@ const ProductScreen = {
             <div class="details-action">
                 <ul>
                     <li>
-                        Price: $${discountProduct(
-                          product.price,
-                          product.discount
+                        Price: $${showNumMil(
+                          discountProduct(product.price, product.discount)
                         )}
                     </li>
                     <li>                    
