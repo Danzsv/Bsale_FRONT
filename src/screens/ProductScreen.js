@@ -33,7 +33,7 @@ const ProductScreen = {
             <div class="details-info">
                 <ul>
                     <li>
-                        <h1>${product.product_name}</h1>
+                        <h1>${product.product_name.toUpperCase()}</h1>
                     </li>
                     <li class="detail-discount">
                         Discount: ${

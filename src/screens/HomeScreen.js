@@ -39,9 +39,9 @@ const HomeScreen = {
                     </a>
 
                     <div class="product-name">
-                    <a href="/#/product/${product.product_id}"> ${
-                  product.product_name
-                } </a>
+                    <a href="/#/product/${
+                      product.product_id
+                    }"> ${product.product_name.toUpperCase()} </a>
                     </div>
                     ${
                       product.discount !== 0
