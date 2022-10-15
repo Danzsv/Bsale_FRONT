@@ -7,7 +7,6 @@ const Aside = {
     const request = parseRequestUrl();
     const response = await axios.get(`${apiUrl}/categories`);
     const categories = response.data;
-    console.log(categories);
 
     return `
      <div class="aside-header">

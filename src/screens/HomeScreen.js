@@ -10,7 +10,6 @@ import {
 const HomeScreen = {
   render: async () => {
     const request = parseRequestUrl();
-    console.log(request);
     var response;
     if (request.name === "name") {
       response = await axios.get(`${apiUrl}/products?name=${request.value}`);
@@ -22,7 +21,6 @@ const HomeScreen = {
       response = await axios.get(`${apiUrl}/products`);
     }
 
-    console.log(response.data);
     if (response.data.msg) {
       return `<div>El producto no existe actualmente </div>`;
     }

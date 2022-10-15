@@ -2,7 +2,6 @@ import { parseRequestUrl } from "../utils";
 const Header = {
   render: () => {
     const request = parseRequestUrl();
-    console.log(request);
     if (request.name === "name") {
       var value = request.value;
     }

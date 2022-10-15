@@ -21,7 +21,6 @@ const ProductScreen = {
     if (product.msg) {
       return `<h1>${product.msg}</h1>`;
     }
-    console.log(product);
     return `
     <div class="content">
         <div class="back-to-result">
