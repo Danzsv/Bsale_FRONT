@@ -1,10 +1,25 @@
 import axios from "axios";
 import { apiUrl, imgNotFound } from "../config";
+import { parseRequestUrl } from "../utils";
+
 const HomeScreen = {
   render: async () => {
-    const response = await axios.get(`${apiUrl}/products`);
-    if (!response) {
-      return `<div>Error in getting data </div>`;
+    const request = parseRequestUrl();
+    console.log(request);
+    var response;
+    if (request.name === "name") {
+      response = await axios.get(`${apiUrl}/products?name=${request.value}`);
+    } else if (request.name === "category") {
+      response = await axios.get(
+        `${apiUrl}/products?category=${request.value}`
+      );
+    } else {
+      response = await axios.get(`${apiUrl}/products`);
+    }
+
+    console.log(response.data);
+    if (response.data.msg) {
+      return `<div>El producto no existe actualmente </div>`;
     }
     const products = await response.data;
 
