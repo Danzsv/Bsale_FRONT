@@ -15,10 +15,10 @@ const addToCart = (item, forceUpdate = false) => {
   } else {
     cartItems = [...cartItems, item];
   }
+  setCartItems(cartItems);
   if (forceUpdate) {
     rerender(CartScreen);
   }
-  setCartItems(cartItems);
 };
 
 const removeFromCart = (id) => {

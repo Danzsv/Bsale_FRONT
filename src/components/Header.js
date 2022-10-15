@@ -1,13 +1,17 @@
 import { parseRequestUrl } from "../utils";
 const Header = {
   render: () => {
-    const { value } = parseRequestUrl();
+    const request = parseRequestUrl();
+    console.log(request);
+    if (request.name === "name") {
+      var value = request.value;
+    }
     return `
   <div class="brand">
     <button id="aside-open-button">
       &#9776;
     </button>
-    <a href="/#/">BSale Test</a>
+    <a href="/">BSale Test</a>
   </div>
   <div class="search">
   <form class="search-form"  id="search-form">
