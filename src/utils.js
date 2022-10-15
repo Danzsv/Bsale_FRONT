@@ -1,3 +1,10 @@
+export const discountProduct = (price, discount) => {
+  const newPrice = price - price * (discount / 100);
+  // console.log(newPrice);
+  return newPrice;
+};
+export const uppInitial = (str) => str[0].toUpperCase() + str.slice(1);
+
 export const parseRequestUrl = () => {
   const address = document.location.hash.slice(1).split("?")[0];
   const queryString =

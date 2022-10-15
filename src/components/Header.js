@@ -23,7 +23,7 @@ const Header = {
   </div>
   <div>
     <span><i class="fa fa-shopping-cart fa-2x"></i></span>
-    <a href="/#/cart">Shooping Cart</a>
+    <a href="/#/cart">Shopping Cart</a>
   </div>`;
   },
   after_render: () => {

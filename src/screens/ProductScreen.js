@@ -1,4 +1,4 @@
-import { parseRequestUrl } from "../utils";
+import { parseRequestUrl, discountProduct, uppInitial } from "../utils";
 import { getProduct } from "../api";
 import { imgNotFound } from "../config";
 
@@ -35,13 +35,45 @@ const ProductScreen = {
                     <li>
                         <h1>${product.product_name}</h1>
                     </li>
-                    <li>
-                        Price: <strong>$${product.price}</strong>
+                    <li class="detail-discount">
+                        Discount: ${
+                          product.discount === 0
+                            ? "Not Discount"
+                            : `${product.discount} %`
+                        }
                     </li>
+                    
+                    Price:                                      
+                    ${
+                      product.discount === 0
+                        ? `
+                        <li class="detail-list">
+                        <strong>$${discountProduct(
+                          product.price,
+                          product.discount
+                        )}</strong>
+                        </li>`
+                        : `
+                        <li class="detail-list-discount">
+                            <strike>
+                            $${product.price}                        
+                            </strike>
+                        </li>    
+                        <li class="detail-list-discount">
+                            <strong>$${discountProduct(
+                              product.price,
+                              product.discount
+                            )}</strong>
+                        </li>
+                        
+                        
+                        `
+                    }
+                    
                     <li>
                         Category: 
                         <div>
-                            ${product.name}
+                            ${uppInitial(product.name)}
                         </div>
                     </li>
                 </ul>                
@@ -49,7 +81,10 @@ const ProductScreen = {
             <div class="details-action">
                 <ul>
                     <li>
-                        Price: $${product.price}
+                        Price: $${discountProduct(
+                          product.price,
+                          product.discount
+                        )}
                     </li>
                     <li>                    
                         <button id="add-button"class="fw primary">Add to Cart</button>                                        

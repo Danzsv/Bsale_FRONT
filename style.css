@@ -151,6 +151,13 @@ footer {
   color: #ff5c1a;
   font-size: 2rem;
 }
+.product-price-discount {
+  color: #c04040;
+  font-size: 2rem;
+}
+.product-discount {
+  color: #0f95e1;
+}
 .product-price span {
   font-size: 1.2rem;
 }
@@ -169,6 +176,7 @@ footer {
 /* Product Details */
 .details {
   display: flex;
+  font-size: 25px;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -194,6 +202,16 @@ footer {
   font-size: 2rem;
   margin: 0;
 }
+.detail-list-discount {
+  color: #c04040;
+}
+.detail-list {
+  color: #ff5c1a;
+}
+.detail-discount {
+  color: #0b7dda;
+}
+
 .details-info li,
 .details-action li {
   margin-bottom: 1rem;

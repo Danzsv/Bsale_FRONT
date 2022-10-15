@@ -1,5 +1,5 @@
 import { getProduct } from "../api";
-import { parseRequestUrl, rerender } from "../utils";
+import { parseRequestUrl, rerender, discountProduct } from "../utils";
 import { getCartItems, setCartItems } from "../localStorage";
 import { imgNotFound } from "../config";
 
@@ -60,7 +60,7 @@ const CartScreen = {
           product.url_image === "" || product.url_image === null
             ? imgNotFound
             : product.url_image,
-        price: product.price,
+        price: discountProduct(product.price, product.discount),
         countInStock: 10,
         qty: 1,
       });
