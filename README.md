@@ -14,8 +14,7 @@ La idea general de este proyecto es crear una aplicación web donde se puedan ve
 ## Contenido
 
 Front-End, aplicación web de un e-commerce.
-
-- Deploy del proyecto : https://bsalefront.vercel.app/#/
+Deploy del proyecto : https://bsalefront.vercel.app/#/
 
 El proyecto esta realizado en:
 
@@ -62,7 +61,7 @@ Si hicimos correctamente los pasos anteriores, nuestra aplicación debería desp
 
 Y deberíamos tener un primer vistazo a nuestra home page , donde podemos ver los distintos productos del ecommerce, con sus respectivos nombres, imágenes, precios y descuentos.
 
--Si el producto no cuenta con una imagen, se muestra una imagen por defecto con el mensaje de `imagen no disponible`.
+- Si el producto no cuenta con una imagen, se muestra una imagen por defecto con el mensaje de `imagen no disponible`.
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908145/PF/home_aeokze.png)
 
@@ -86,7 +85,7 @@ En nuestra aplicación web también contamos con una barra de busqueda, donde po
 
 Una vez ingresado el nombre del producto que deseamos buscar, al hacerle click en el ícono de la lupa o presionando nuestra tecla Enter, nos desplagara una lista de los productos que coincidan con el nombre que ingresamos.
 
-En este ejemplo en producto es `ron`
+- En este ejemplo en producto es `ron`
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665909349/PF/search_bar_yyhm20.png)
 
@@ -102,6 +101,6 @@ Si hemos escogido la opción de añadir un producto a nuestro carrito, veremos u
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665910016/PF/shopping_cart_yhqpmo.png)
 
-Desde este apartado podemos añadir más unidades de uno o distintos productos, así como eliminarlo de nuestro carrito(mediante el boton de `delete`). Y el subtotal de nuestro carrito de compras, también se verá actualizado.
+Desde este apartado podemos añadir más unidades de uno o distintos productos, así como eliminarlo de nuestro carrito (mediante el boton de `Delete`). Y el subtotal de nuestro carrito de compras, también se verá actualizado.
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665910357/PF/update_shopping_cart_tdcqpd.png)
