@@ -12,12 +12,41 @@ const HomeScreen = {
     const request = parseRequestUrl();
     const response = await whatRequestIs(request);
 
-    if (response.data.msg) {
+    const itemsXPage = 10;
+    const allProducts = response[1].data;
+
+    const numPages = Math.ceil(allProducts.length / itemsXPage);
+    const arrayPages = [];
+
+    for (let index = 1; index <= numPages; index++) {
+      arrayPages.push(index);
+    }
+
+    if (response[0].data.msg) {
       return `<div>Error al obtener los productos</div>`;
     }
-    const products = response.data;
+    let products = response[0].data;
 
     return `
+    <div class="paginated">
+    <ul>
+        ${
+          request.name === "" || request.name === "page"
+            ? arrayPages
+                .map(
+                  (element) => `
+          <li>
+          <a href="/#/?page=${element}">
+          ${element}
+          </a>
+          </li>
+          `
+                )
+                .join("\n")
+            : ``
+        }
+        </ul>
+        </div>  
         <ul class="products">
             ${products
               .map(

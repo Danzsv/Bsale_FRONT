@@ -407,3 +407,12 @@ ul.categories {
 .fa {
   color: white;
 }
+
+.paginated ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.paginated ul li {
+  padding-left: 50px;
+}

@@ -14,13 +14,26 @@ export const getProduct = async (id) => {
   }
 };
 export const whatRequestIs = async (request) => {
+  const allProducts = await axios.get(`${apiUrl}/products`);
+
   if (request.name === "name") {
-    return await axios.get(`${apiUrl}/products?name=${request.value}`);
+    let data = await axios.get(`${apiUrl}/products?name=${request.value}`);
+    return [data, allProducts];
   }
   if (request.name === "category") {
-    return await axios.get(`${apiUrl}/products?category=${request.value}`);
+    let data = await axios.get(`${apiUrl}/products?category=${request.value}`);
+    return [data, allProducts];
   }
-  return await axios.get(`${apiUrl}/products`);
+  if (request.name === "page") {
+    let data = await axios.get(
+      `http://localhost:3001/api/products?page=${request.value}`
+    );
+    return [data, allProducts];
+  }
+  const firstPage = await axios.get(
+    `http://localhost:3001/api/products?page=1`
+  );
+  return [firstPage, allProducts];
 };
 
 export const getCategories = async () => {

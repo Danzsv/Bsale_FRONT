@@ -75,7 +75,9 @@ Si hacemos click en este botón se nos desplagará un nuevo menú en la parte iz
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908641/PF/side_bar_lgdch0.png)
 
-Ahora los productos se han filtrado por la categoría seleccionada. En este ejemplo la categoría seleccionada fue Pisco.
+Ahora los productos se han filtrado por la categoría seleccionada.
+
+- En este ejemplo la categoría seleccionada fue `Pisco`.
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908641/PF/sibe_bar_example_z8oggx.png)
 
@@ -85,7 +87,7 @@ En nuestra aplicación web también contamos con una barra de busqueda, donde po
 
 Una vez ingresado el nombre del producto que deseamos buscar, al hacerle click en el ícono de la lupa o presionando nuestra tecla Enter, nos desplagara una lista de los productos que coincidan con el nombre que ingresamos.
 
-- En este ejemplo en producto es `ron`
+- En este ejemplo el producto buscado es `ron`
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665909349/PF/search_bar_yyhm20.png)
 
