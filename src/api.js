@@ -25,14 +25,10 @@ export const whatRequestIs = async (request) => {
     return [data, allProducts];
   }
   if (request.name === "page") {
-    let data = await axios.get(
-      `http://localhost:3001/api/products?page=${request.value}`
-    );
+    let data = await axios.get(`${apiUrl}/products?page=${request.value}`);
     return [data, allProducts];
   }
-  const firstPage = await axios.get(
-    `http://localhost:3001/api/products?page=1`
-  );
+  const firstPage = await axios.get(`${apiUrl}/products?page=1`);
   return [firstPage, allProducts];
 };
 
