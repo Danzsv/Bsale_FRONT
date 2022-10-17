@@ -22,10 +22,7 @@ const ProductScreen = {
       return `<h1>${product.msg}</h1>`;
     }
     return `
-    <div class="content">
-        <div class="back-to-result">
-            <a href="/#/">Back to result</a>
-        </div>
+    <div class="content">       
         <div class="details">
             <div class="details-image">
                 <img src="${
