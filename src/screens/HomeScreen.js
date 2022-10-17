@@ -27,6 +27,17 @@ const HomeScreen = {
     }
     let products = response[0].data;
 
+    const uwu = document.getElementsByClassName("page-current");
+    const currentPage = (element) => {
+      if (request.value == element) {
+        return true;
+      }
+      if (request.name === "" && element === 1) {
+        return true;
+      }
+      return false;
+    };
+
     return `
     <div class="paginated">
     <ul>
@@ -35,11 +46,15 @@ const HomeScreen = {
             ? arrayPages
                 .map(
                   (element) => `
-          <li>
-          <a href="/#/?page=${element}">
-          ${element}
-          </a>
-          </li>
+                  <a href="/#/?page=${element}">                  
+                  <li class=${`page-current`}>          
+                  <li>          
+                  <span class=${currentPage(element) ? "page-current" : ""} >
+                  ${element}
+                  </span>
+                  </li>
+                  </a>
+          
           `
                 )
                 .join("\n")

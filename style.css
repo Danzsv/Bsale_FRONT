@@ -414,5 +414,11 @@ ul.categories {
   justify-content: center;
 }
 .paginated ul li {
-  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.page-current {
+  color: #0b7dda;
+  font-weight: bold;
+  text-decoration: underline;
 }
