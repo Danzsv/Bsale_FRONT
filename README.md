@@ -63,23 +63,33 @@ Y deberíamos tener un primer vistazo a nuestra home page , donde podemos ver lo
 
 - Si el producto no cuenta con una imagen, se muestra una imagen por defecto con el mensaje de `imagen no disponible`.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908145/PF/home_aeokze.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970066/Bsale%20Test/home_paginado_bvuahp.png)
 
 ## Side Bar
 
 A continuación si prestamos atención, en la esquina superior izquierda vemos un ícono con tres rayas paralelas horizontalmente, este es nuestro botón de side bar.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908145/PF/home_aeokze.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970066/Bsale%20Test/home_paginado_bvuahp.png)
 
 Si hacemos click en este botón se nos desplagará un nuevo menú en la parte izquiera de la pantalla con distintas categorías de productos.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908641/PF/side_bar_lgdch0.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970248/Bsale%20Test/sidebar_paginado_znmnxj.png)
 
 Ahora los productos se han filtrado por la categoría seleccionada.
 
 - En este ejemplo la categoría seleccionada fue `Pisco`.
 
 ![](https://res.cloudinary.com/programandoandopf/image/upload/v1665908641/PF/sibe_bar_example_z8oggx.png)
+
+## Paginado
+
+Adicionalmente contamos con un paginado, donde podemos buscar nuestros productos por página.
+
+Donde se nos mostrarán un total de 10 productos por página, segpún la cantidad total de productos que tengamos.
+
+- En este ejemplo nos encontramos ubicados en la página `3`
+
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665969935/PF/home_paginado_mggkeq.png)
 
 ## Search Bar
 
