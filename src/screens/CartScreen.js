@@ -7,6 +7,7 @@ import {
 } from "../utils";
 import { getCartItems, setCartItems } from "../localStorage";
 import { imgNotFound } from "../config";
+import Swal from "sweetalert2";
 
 const addToCart = (item, forceUpdate = false) => {
   let cartItems = getCartItems();
@@ -37,6 +38,19 @@ const removeFromCart = (id) => {
 
 const CartScreen = {
   after_render: () => {
+    const chckOutButt = document.getElementById("checkout-button");
+    console.log(chckOutButt);
+    chckOutButt.addEventListener("click", () => {
+      Swal.fire({
+        title: "UNDER CONSTRUCTION",
+        text: "COMING SOON",
+        width: "500px",
+        height: "500px",
+        icon: "warning",
+        confirmButtonText: "OK",
+      });
+    });
+
     const qtySelects = document.getElementsByClassName("qty-select");
     Array.from(qtySelects).forEach((qtySelect) => {
       qtySelect.addEventListener("change", (e) => {
@@ -127,7 +141,7 @@ const CartScreen = {
             :
             $ ${showNumMil(cartItems.reduce((a, c) => a + c.price * c.qty, 0))}
           </h3>
-          <button id="checkout-button" class="primary fw">
+          <button id="checkout-button" class="primary fw checkout-button">
             Procced to CheckOut
           </button>
       </div>
