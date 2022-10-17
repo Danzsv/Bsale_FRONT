@@ -63,17 +63,17 @@ Y deberíamos tener un primer vistazo a nuestra home page , donde podemos ver lo
 
 - Si el producto no cuenta con una imagen, se muestra una imagen por defecto con el mensaje de `imagen no disponible`.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970066/Bsale%20Test/home_paginado_bvuahp.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665975026/Bsale%20Test/home_paginado2_syfp0r.png)
 
 ## Side Bar
 
 A continuación si prestamos atención, en la esquina superior izquierda vemos un ícono con tres rayas paralelas horizontalmente, este es nuestro botón de side bar.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970066/Bsale%20Test/home_paginado_bvuahp.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665975026/Bsale%20Test/home_paginado2_syfp0r.png)
 
 Si hacemos click en este botón se nos desplagará un nuevo menú en la parte izquiera de la pantalla con distintas categorías de productos.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665970248/Bsale%20Test/sidebar_paginado_znmnxj.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665975114/Bsale%20Test/sidebar_paginado2_f2xqaj.png)
 
 Ahora los productos se han filtrado por la categoría seleccionada.
 
@@ -89,7 +89,7 @@ Donde se nos mostrarán un total de 10 productos por página, segpún la cantida
 
 - En este ejemplo nos encontramos ubicados en la página `3`
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665969935/PF/home_paginado_mggkeq.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665975174/Bsale%20Test/sibe_bar_example2_gi4ebc.png)
 
 ## Search Bar
 
@@ -105,7 +105,7 @@ Una vez ingresado el nombre del producto que deseamos buscar, al hacerle click e
 
 Al hacer click tanto en la imagen o en el nombre del producto, podemos ver un detalle del producto y ahora tenemos la opción de agregarlo a nuestro carrito de compras, mediante el boton de `Add to cart`.
 
-![](https://res.cloudinary.com/programandoandopf/image/upload/v1665909789/PF/detail_product_wx4pv3.png)
+![](https://res.cloudinary.com/programandoandopf/image/upload/v1665975257/Bsale%20Test/detail_product2_mi4xqj.png)
 
 ## Carrito de compras
 
